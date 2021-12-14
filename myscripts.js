@@ -17,6 +17,28 @@ function promptGame() {
 }
 promptGame();
 
-//compare random option of the computer above with user entry.
+// User or computer or tie function grabWinner {
+function grabWinner() {
+  if (u === R && computerChoice === P) {
+    return "You suck, I win!";
+  } else if (u === R && computerChoice === S) {
+    return "Ok, you won...whatever";
+  } else if (u === R && computerChoice === R) {
+    return "Stop choosing the one I've choose, let's try again";
+  } else if (u === P && computerChoice === P) {
+    return "Stop choosing the one I've choose, let's try again";
+  } else if (u === P && computerChoice === S) {
+    return "You suck, I win!";
+  } else if (u === P && computerChoice === R) {
+    return "Ok, you won...whatever";
+  } else if (u === S && computerChoice === S) {
+    return "Stop choosing the one I've choose, let's try again";
+  } else if (u === S && computerChoice === P) {
+    return "Ok, you won...whatever";
+  } else if (u === S && computerChoice === R);
+  return "You suck, I win!";
+}
+
+//display result.
 
 //return another alert with display of random option, and  winner or looser or tie
