@@ -11,7 +11,7 @@ function computerChoice() {
   return randomPick[randomNumber];
 }
 
-//function that generates an alert with prompt asking for R,S,P, then one for are you sure?
+//function that generates an alert with prompt asking for R,S,P, then one for "are you sure?"
 
 function promptGame() {
   u = prompt("Lets play a game, what do you pick? Rock, Paper or Scissors?");
@@ -22,7 +22,7 @@ function promptGame() {
 }
 console.log(promptGame());
 
-//User or computer or tie function grabWinner
+//User or computer or tie, function to grabWinner
 
 function grabWinner() {
   if (R.includes(u) && computerChoice() === P) {
@@ -43,8 +43,4 @@ function grabWinner() {
     alert(computerChoice() + " Tie, let's play again");
   } else if (S.includes(u) && computerChoice() === R)
     alert(computerChoice() + " I won this time, you're terrible at this game");
-  else if ((includes(u) != S, R, P)) {
-    alert("Come on man, you know how to play the game");
-    grabWinner();
-  }
 }
