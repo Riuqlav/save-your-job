@@ -12,10 +12,16 @@ function computerChoice() {
 }
 //working until here don't touch it.
 
-
-
-
-
+//function that generates an alert with prompt asking for R,S,P
+function promptGame() {
+  window.prompt("Lets play a game, what do you pick? Rock, Paper or Scissors?"
+  )
+  if ((u = R || S || P)) {
+    grabWinner();
+  } else if (alert("Come on man, you know the game, let's do it"));
+  alert("are you sure?")
+};
+function promptGame()
 
 
 //User or computer or tie function grabWinner {
@@ -44,15 +50,4 @@ function computerChoice() {
   };
 
 
-  
-//function that generates an alert with prompt asking for R,S,P
-function promptGame() {
-  let u = prompt(
-    "Lets play a game, what do you pick? Rock, Paper or Scissors?"
-  )
-  if ((u = R || S || P)) {
-    grabWinner();
-  } else if (alert("Come on man, you know the game, let's do it"));
-  alert("are you sure?")
-};
-function promptGame();
+
