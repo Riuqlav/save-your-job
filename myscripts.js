@@ -3,68 +3,59 @@
 const options = ["rock", "paper", "scissors"];
 
 //function computerPlay with random option
-function computerChoice() {
-  const randomPick = ["rock", "paper", "scissors"];
-  const randomNumber = Math.floor(Math.random() * 3);
-  return randomPick[randomNumber];
+function rollComputerChoice() {
+  const randomNumber = Math.floor(Math.random() * options.length);
+  return options[randomNumber];
 }
-console.log(computerChoice());
 
 //function that generates an alert with prompt asking for "rock", "paper", "scissors"
 
 function promptGame() {
-  u = window.prompt("Let's play a game!", "Choose Rock, Paper or Scissors.");
-  u = u.toLowerCase(u);
-  if (u === "rock" || u === "scissors" || u === "paper") {
-    grabTheWinner(u);
+  let userChoice = window.prompt(
+    "Let's play a game! Choose Rock, Paper or Scissors."
+  );
+  alert("Are you sure?");
+  alert("Are you VERY sure?");
+  userChoice = userChoice.toLowerCase(userChoice);
+  const computerChoice = rollComputerChoice();
+  if (options.includes(userChoice)) {
+    grabTheWinner(userChoice, computerChoice);
   } else {
-    promptGame();
+    alert("Come on, you know how to play the game! try again");
   }
+  // Restart the game.
+  promptGame();
+}
+promptGame();
+
+function youLost(userChoice, computerChoice) {
+  alert(
+    "I won this time, you're terrible at this game. My pick: " +
+      computerChoice +
+      ", your pick: " +
+      userChoice
+  );
+}
+
+function youWon(userChoice, computerChoice) {
+  alert("You won :/ My pick: " + computerChoice + ", your pick: " + userChoice);
 }
 
 //User or computer or tie, function to grabWinner
-function grabTheWinner(u, computerChoice()) {
-  if (u === "rock" && computerChoice() === "paper" ); {
-    alert(computerChoice() + " I won this time, you're terrible at this game")}
-    (u === "rock" && computerChoice() === "scissors" ); {
-      alert(computerChoice() + "You won :/")}
-      (u === "scissors" && computerChoice() === "paper" ); {
-        alert(computerChoice() + " You won :/")}
-        (u === "scissors" && computerChoice() === "rock" ); {
-          alert(computerChoice() + " I won this time, you're terrible at this game")}
-          (u === "paper" && computerChoice() === "rock" ); {
-            alert(computerChoice() + " You won :/")}
-            (u === "paper" && computerChoice() === "scissors" ); {
-              alert(computerChoice() + " I won this time, you're terrible at this game")}
-  
-  else (u === computerChoice())
-  {
-    alert("I've picked the same, tie!")
+function grabTheWinner(userChoice, computerChoice) {
+  if (userChoice === "rock" && computerChoice === "paper") {
+    youLost(userChoice, computerChoice);
+  } else if (userChoice === "rock" && computerChoice === "scissors") {
+    youWon(userChoice, computerChoice);
+  } else if (userChoice === "paper" && computerChoice === "scissors") {
+    youLost(userChoice, computerChoice);
+  } else if (userChoice === "paper" && computerChoice === "rock") {
+    youWon(userChoice, computerChoice);
+  } else if (userChoice === "scissors" && computerChoice === "paper") {
+    youWon(userChoice, computerChoice);
+  } else if (userChoice === "scissors" && computerChoice === "rock") {
+    youLost(userChoice, computerChoice);
+  } else if (userChoice === computerChoice) {
+    alert("I've picked the same, tie!");
   }
 }
-
-
-
-
-
-
-  
-  /****if (R.includes(u) && computerChoice() === P) {
-    alert(computerChoice() + " I won this time, you're terrible at this game");
-  } else if (R.includes(u) && computerChoice() === S) {
-    alert(computerChoice() + " Ok you won, let's play again");
-  } else if (R.includes(u) && computerChoice() === R) {
-    alert(computerChoice() + " Tie, let's play again");
-  } else if (P.includes(u) && computerChoice() === P) {
-    alert(computerChoice() + " Tie, let's play again");
-  } else if (P.includes(u) && computerChoice() === S) {
-    alert(computerChoice() + " I won this time, you're terrible at this game");
-  } else if (P.includes(u) && computerChoice() === R) {
-    alert(computerChoice() + " Ok you won, let's play again");
-  } else if (S.includes(u) && computerChoice() === P) {
-    alert(computerChoice() + " Ok you won, let's play again");
-  } else if (S.includes(u) && computerChoice() === S) {
-    alert(computerChoice() + " Tie, let's play again");
-  } else if (S.includes(u) && computerChoice() === R)
-    alert(computerChoice() + " I won this time, you're terrible at this game");
-
