@@ -15,7 +15,7 @@ function promptGame() {
     "Let's play a game! Choose Rock, Paper or Scissors."
   );
   alert("Are you sure?");
-  alert("Are you VERY sure?");
+  alert("Are you VERY sure Antoine?");
   userChoice = userChoice.toLowerCase(userChoice);
   const computerChoice = rollComputerChoice();
   if (options.includes(userChoice)) {
