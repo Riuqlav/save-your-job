@@ -10,7 +10,7 @@ function rollComputerChoice() {
 
 //function that generates an alert with prompt asking for "rock", "paper", "scissors"
 
-function promptGame() {
+/*function promptGame() {
   let userChoice = window.prompt(
     "Let's play a game! Choose Rock, Paper or Scissors."
   );
@@ -27,7 +27,7 @@ function promptGame() {
   promptGame();
 }
 promptGame();
-
+*/
 function youLost(userChoice, computerChoice) {
   alert(
     "I won this time, you're terrible at this game. My pick: " +
