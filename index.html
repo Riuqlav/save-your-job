@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <link rel="stylesheet" href="styles.css">
-<script src="myscripts.js"></script>
+
+
 
 <head>
     <meta charset="UTF-8">
@@ -12,10 +13,16 @@
 
 
 <body>
-    <div class="play">
-        <div class="buttons zoom">✊</div>
-        <div class="buttons zoom">✌️</div>
-        <div class="buttons zoom">✋</div>
+    <h6 style="color: aliceblue;
+    text-align: center;">Job roles are dramatically changing now that machines are here. <br> Show your
+        employers you still worth it on this game!
+    </h6>
+
+    <div class="selections" id="myBtn">
+        <div class="rock selection zoom" id="btnRock">✊</div>
+        <div class="paper selection zoom" id="btnPaper">✋</div>
+        <div class="scissors selection zoom" id="btnScissors">✌️</div>
+
     </div>
 
     <div class="players">
@@ -24,26 +31,36 @@
     </div>
 
     <div class="score">
-        <div class="players">0</div>
-        <div class=" players">0</div>
+        <span class="players">0</span>
+        <span class=" players">0</span>
     </div>
 
 
-    <div class="youLost">
+    <div class="youLost" style="text-align: center;">
         <img src="https://c.tenor.com/dezdYdcf8KYAAAAC/they-took-our-jobs-darryl-weathers.gif"
             alt="They took your job!">
+        <div>
+
+            <img style="max-width: 70px;
+                        "
+                src="/transparent-refresh-icon-reuse-icon-minimal-universal-theme-ic-5dc845bf214ea6.1741641115734061431364.png"
+                alt="Play Again?">
+        </div>
     </div>
 
-    <div>
+    <div class="youWin" style="text-align: center;">
         <img src="https://c.tenor.com/OBcV0-r69mYAAAAC/throwing-computer-ron-swanson.gif" alt="You can keep your job">
+        <div>
+
+            <img style="max-width: 70px;"
+                src="/transparent-refresh-icon-reuse-icon-minimal-universal-theme-ic-5dc845bf214ea6.1741641115734061431364.png"
+                alt="Play Again?">
+        </div>
     </div>
 
 
-    <div>
-
-        <img src="/transparent-refresh-icon-reuse-icon-minimal-universal-theme-ic-5dc845bf214ea6.1741641115734061431364.png"
-            alt="Play Again?">
-    </div>
 </body>
+
+<script src="myscripts.js"></script>
 
 </html>

@@ -1,6 +1,14 @@
 //Variables accepted in the game
 
-const options = ["rock", "paper", "scissors"];
+//const options = ["rock", "paper", "scissors"];
+const rock = document.querySelector(".rock");
+const paper = document.querySelector(".paper");
+const scissors = document.querySelector(".scissors");
+
+//event listener for getting the user option
+rock.addEventListener("click", (e) => {});
+paper.addEventListener("click", (e) => {});
+scissors.addEventListener("click", (e) => {});
 
 //function computerPlay with random option
 function rollComputerChoice() {
@@ -8,26 +16,8 @@ function rollComputerChoice() {
   return options[randomNumber];
 }
 
-//function that generates an alert with prompt asking for "rock", "paper", "scissors"
+// function you lost show the div lost and restart
 
-/*function promptGame() {
-  let userChoice = window.prompt(
-    "Let's play a game! Choose Rock, Paper or Scissors."
-  );
-  alert("Are you sure?");
-  alert("Are you VERY sure Antoine?");
-  userChoice = userChoice.toLowerCase(userChoice);
-  const computerChoice = rollComputerChoice();
-  if (options.includes(userChoice)) {
-    grabTheWinner(userChoice, computerChoice);
-  } else {
-    alert("Come on, you know how to play the game! try again");
-  }
-  // Restart the game.
-  promptGame();
-}
-promptGame();
-*/
 function youLost(userChoice, computerChoice) {
   alert(
     "I won this time, you're terrible at this game. My pick: " +
@@ -36,6 +26,8 @@ function youLost(userChoice, computerChoice) {
       userChoice
   );
 }
+
+// function you won show the div win and restart
 
 function youWon(userChoice, computerChoice) {
   alert("You won :/ My pick: " + computerChoice + ", your pick: " + userChoice);

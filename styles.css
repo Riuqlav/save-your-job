@@ -3,7 +3,7 @@ body {
   font-size: 50px;
 }
 
-.play {
+.selections {
   display: flex;
   justify-content: space-evenly;
   flex-flow: row;
@@ -23,7 +23,7 @@ body {
   font-size: 50px;
 }
 
-.buttons {
+.selection {
   font-size: 50px;
   margin: 20px;
 }
