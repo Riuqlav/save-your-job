@@ -16,6 +16,8 @@ function rollComputerChoice() {
   return options[randomNumber];
 }
 
+let userChoice = rock || paper || scissors;
+
 // function you lost show the div lost and restart
 
 function youLost(userChoice, computerChoice) {
