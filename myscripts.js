@@ -1,14 +1,20 @@
 //Variables accepted in the game
 
-//const options = ["rock", "paper", "scissors"];
+const options = ["rock", "paper", "scissors"];
 const rock = document.querySelector(".rock");
 const paper = document.querySelector(".paper");
 const scissors = document.querySelector(".scissors");
 
 //event listener for getting the user option
-rock.addEventListener("click", (e) => {});
-paper.addEventListener("click", (e) => {});
-scissors.addEventListener("click", (e) => {});
+rock.addEventListener("click", (e) => {
+  grabTheWinner("rock", rollComputerChoice());
+});
+paper.addEventListener("click", (e) => {
+  grabTheWinner("paper", rollComputerChoice());
+});
+scissors.addEventListener("click", (e) => {
+  grabTheWinner("scissors", rollComputerChoice());
+});
 
 //function computerPlay with random option
 function rollComputerChoice() {
@@ -16,23 +22,22 @@ function rollComputerChoice() {
   return options[randomNumber];
 }
 
-let userChoice = rock || paper || scissors;
+// function that increases span for computer
 
-// function you lost show the div lost and restart
-
-function youLost(userChoice, computerChoice) {
-  alert(
-    "I won this time, you're terrible at this game. My pick: " +
-      computerChoice +
-      ", your pick: " +
-      userChoice
-  );
+function youLost() {
+  let computerScore = document.getElementById("computerScore");
+  let number = computerScore.innerHTML;
+  number++;
+  computerScore.innerHTML = number;
 }
 
-// function you won show the div win and restart
+// function that increases span for user
 
-function youWon(userChoice, computerChoice) {
-  alert("You won :/ My pick: " + computerChoice + ", your pick: " + userChoice);
+function youWon() {
+  let userScore = document.getElementById("userScore");
+  let number = userScore.innerHTML;
+  number++;
+  userScore.innerHTML = number;
 }
 
 //User or computer or tie, function to grabWinner
