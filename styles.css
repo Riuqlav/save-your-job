@@ -8,19 +8,20 @@ body {
   justify-content: space-evenly;
   flex-flow: row;
 }
-.score {
+
+.players {
   display: flex;
   justify-content: space-evenly;
-  margin-top: 50px;
+  margin-top: 70px;
   font-size: 50px;
 }
 
-.players {
-  color: aquamarine;
+.score {
   display: flex;
   justify-content: space-evenly;
-  margin-top: 50px;
+  margin-top: 40px;
   font-size: 50px;
+  color: aquamarine;
 }
 
 .selection {

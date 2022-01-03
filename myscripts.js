@@ -22,7 +22,7 @@ function rollComputerChoice() {
   return options[randomNumber];
 }
 
-// function that increases span for computer
+// function that increases score for computer
 
 function youLost() {
   let computerScore = document.getElementById("computerScore");
@@ -31,7 +31,7 @@ function youLost() {
   computerScore.innerHTML = number;
 }
 
-// function that increases span for user
+// function that increases score for user
 
 function youWon() {
   let userScore = document.getElementById("userScore");
@@ -54,7 +54,13 @@ function grabTheWinner(userChoice, computerChoice) {
     youWon(userChoice, computerChoice);
   } else if (userChoice === "scissors" && computerChoice === "rock") {
     youLost(userChoice, computerChoice);
-  } else if (userChoice === computerChoice) {
-    alert("I've picked the same, tie!");
+  }
+}
+
+function showResult() {
+  if (document.getElementById("userScore").innerHTML >= 5) {
+    alert("worked");
+  } else if (document.getElementById("computerScore").innerHTML >= 5) {
+    alert("worked");
   }
 }
