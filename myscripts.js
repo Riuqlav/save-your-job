@@ -57,10 +57,15 @@ function grabTheWinner(userChoice, computerChoice) {
   }
 }
 
+const showResultPC = document.getElementById("computerScore");
+const showResultUser = document.getElementById("userScore");
+
 function showResult() {
-  if (document.getElementById("userScore").innerHTML >= 5) {
+  if (showResultUser >= 2) {
     alert("worked");
-  } else if (document.getElementById("computerScore").innerHTML >= 5) {
+  } else if (showResultPC >= 2) {
     alert("worked");
   }
 }
+
+console.log(Number(showResultPC.textContent));
