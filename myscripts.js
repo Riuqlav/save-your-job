@@ -5,6 +5,9 @@ const rock = document.querySelector(".rock");
 const paper = document.querySelector(".paper");
 const scissors = document.querySelector(".scissors");
 
+let playCounterC = 0;
+let playCounterU = 0;
+
 //event listener for getting the user option
 rock.addEventListener("click", (e) => {
   grabTheWinner("rock", rollComputerChoice());
@@ -29,6 +32,7 @@ function youLost() {
   let number = computerScore.innerHTML;
   number++;
   computerScore.innerHTML = number;
+  playCounterC++;
 }
 
 // function that increases score for user
@@ -38,6 +42,7 @@ function youWon() {
   let number = userScore.innerHTML;
   number++;
   userScore.innerHTML = number;
+  playCounterU++;
 }
 
 //User or computer or tie, function to grabWinner
@@ -57,15 +62,10 @@ function grabTheWinner(userChoice, computerChoice) {
   }
 }
 
-const showResultPC = document.getElementById("computerScore");
-const showResultUser = document.getElementById("userScore");
-
 function showResult() {
-  if (showResultUser >= 2) {
-    alert("worked");
-  } else if (showResultPC >= 2) {
-    alert("worked");
+  if (playCounterU >= 2) {
+    alert("worked!");
+  } else if (playCounterC >= 2) {
+    alert("worked!");
   }
 }
-
-console.log(Number(showResultPC.textContent));
