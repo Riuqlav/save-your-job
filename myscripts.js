@@ -63,9 +63,10 @@ function grabTheWinner(userChoice, computerChoice) {
 }
 
 function showResult() {
-  if (playCounterU >= 2) {
+  if (playCounterU >= "2") {
     alert("worked!");
-  } else if (playCounterC >= 2) {
+  } else if (playCounterC >= "2") {
     alert("worked!");
   }
 }
+console.log(playCounterC);
