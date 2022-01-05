@@ -13,46 +13,47 @@
 
 
 <body>
-    <h6 style="color: aliceblue;
+    <div class="game">
+        <h6 style="color: aliceblue;
     text-align: center;">Job roles are dramatically changing now that machines are here. <br> Prove to your
-        employers you still worth it on this game!
-    </h6>
+            employers you still worth it on this game!
+        </h6>
 
-    <div class="selections">
-        <div class="rock selection zoom">✊</div>
-        <div class="paper selection zoom">✋</div>
-        <div class="scissors selection zoom">✌️</div>
+        <div class="selections">
+            <div class="rock selection zoom">✊</div>
+            <div class="paper selection zoom">✋</div>
+            <div class="scissors selection zoom">✌️</div>
 
+        </div>
+
+        <div class="players">
+            <div>🧠</div>
+            <div>🤖</div>
+        </div>
+
+        <div class="score">
+            <p id="computerScore" class="cScore">0</p>
+            <p id="userScore" class="uScore">0</p>
+        </div>
     </div>
 
-    <div class="players">
-        <div>🧠</div>
-        <div>🤖</div>
-    </div>
-
-    <div class="score">
-        <p id="computerScore" class="cScore">0</p>
-        <p id="userScore" class="uScore">0</p>
-    </div>
-
-
-    <div class="youLost" style="text-align: center;">
+    <div class="youLost" id="gifLost" style="text-align: center; margin-top: 50px;">
         <img src="https://c.tenor.com/dezdYdcf8KYAAAAC/they-took-our-jobs-darryl-weathers.gif"
             alt="They took your job!">
         <div>
 
-            <img style="max-width: 70px;
+            <img class="r2" style="max-width: 70px;
                         "
                 src="/transparent-refresh-icon-reuse-icon-minimal-universal-theme-ic-5dc845bf214ea6.1741641115734061431364.png"
                 alt="Play Again?">
         </div>
     </div>
 
-    <div class="youWin" style="text-align: center;">
+    <div class="youWon" id="gifWon" style="text-align: center; margin-top: 50px;">
         <img src="https://c.tenor.com/OBcV0-r69mYAAAAC/throwing-computer-ron-swanson.gif" alt="You can keep your job">
         <div>
 
-            <img style="max-width: 70px;"
+            <img class="r1" style="max-width: 70px;"
                 src="/transparent-refresh-icon-reuse-icon-minimal-universal-theme-ic-5dc845bf214ea6.1741641115734061431364.png"
                 alt="Play Again?">
         </div>
