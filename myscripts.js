@@ -12,8 +12,8 @@ const W = document.querySelector(".youWon");
 
 const gameBoard = document.querySelector(".game");
 
-//play scores to call functions to game over NOT WORKING
-let playCounterC = 5;
+//play scores to call functions to game over
+let playCounterC = 0;
 let playCounterU = 0;
 
 //event listeners for getting the user option
@@ -33,8 +33,7 @@ function rollComputerChoice() {
   return options[randomNumber];
 }
 
-// function that increases score for computer NOT WORKING
-
+// function that increases score for computer
 function youLost() {
   let computerScore = document.getElementById("computerScore");
   let number = computerScore.innerHTML;
@@ -43,7 +42,7 @@ function youLost() {
   playCounterC++;
 }
 
-// function that increases score for user *NOT WORKING YET*
+// function that increases score for user
 
 function youWon() {
   let userScore = document.getElementById("userScore");
@@ -53,7 +52,7 @@ function youWon() {
   playCounterU++;
 }
 
-//User or computer or tie, function to grabWinner
+//User or computer or tie, function to grabWinner and check the score counter
 function grabTheWinner(userChoice, computerChoice) {
   if (userChoice === "rock" && computerChoice === "paper") {
     youLost(userChoice, computerChoice);
@@ -68,6 +67,7 @@ function grabTheWinner(userChoice, computerChoice) {
   } else if (userChoice === "scissors" && computerChoice === "rock") {
     youLost(userChoice, computerChoice);
   }
+  showResult();
 }
 
 //Function for hiding game board the game and calling final gif's
@@ -77,13 +77,11 @@ L.style.display = "none";
 function showResult() {
   if (playCounterU >= 5) {
     //*I can't manage to call this function even if I write the condition manually
-    W.style.display = "inline";
-    game.style.display = "none"; //*NOT WORKING YET*
+    (L.style.display = "block"), (gameBoard.style.display = "none");
   } else if (playCounterC >= 5) {
-    L.style.display = "inline";
-    game.style.display = "none";
+    (W.style.display = "block"), (gameBoard.style.display = "none");
   } else {
-    game.style.display = "inline";
+    gameBoard.style.display = "block";
   }
 }
 
