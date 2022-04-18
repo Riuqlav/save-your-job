@@ -2,6 +2,8 @@
 
 This project focuses boolean logical operators and event listeners in Javascript.
 
+DEMO: https://riuqlav.github.io/save-your-job/
+
 ## Tools and technologies used
 
 JS, CSS, HTML
