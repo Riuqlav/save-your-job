@@ -1,6 +1,6 @@
 # This is a front end project of a game against the computer.
 
-This project focuses boolean logical operators and event listeners in Javascript.
+This project focuses on boolean logical operators and event listeners in Javascript.
 
 DEMO: https://riuqlav.github.io/save-your-job/
 
