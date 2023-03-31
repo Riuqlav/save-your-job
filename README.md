@@ -1,4 +1,4 @@
-# This is a front end project of a game against the computer.
+# This is a front end project of a game against Computers.
 
 This project focuses on boolean logical operators and event listeners in Javascript.
 
