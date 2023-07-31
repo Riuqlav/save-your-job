@@ -2,15 +2,12 @@
 <html lang="en">
 <link rel="stylesheet" href="styles.css">
 
-
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SAVE YA JOB</title>
 </head>
-
 
 <body>
     <div class="game">
@@ -23,26 +20,35 @@
             <div class="rock selection zoom">✊</div>
             <div class="paper selection zoom">✋</div>
             <div class="scissors selection zoom">✌️</div>
-
         </div>
 
-        <div class="players">
-            <div>🧠</div>
-            <div>🤖</div>
+        <div class="battle">
+            <div class="choices">
+                <div class="userChoice">Ur Move: </div>
+                <div class="userChoice">vs</div>
+
+                <div class="computerChoice"> :AI Move</div>
+            </div>
+            <div id="result"></div>
+
+            <div class="players">
+                <div id="userPlayer">🧠</div>
+                <div id="computerPlayer">🤖</div>
+            </div>
+
+            <div class="score">
+                <p id="userScore" class="cScore">0</p>
+                <p  id="computerScore" class="uScore">0</p>
+            </div>
         </div>
 
-        <div class="score">
-            <p id="computerScore" class="cScore">0</p>
-            <p id="userScore" class="uScore">0</p>
-        </div>
     </div>
 
     <div class="youLost" id="gifLost" style="text-align: center; margin-top: 50px;">
-        <h6 style="color: aquamarine; ">The AI proved to be better 🤖 "BIP-BOOP"</h6>
+        <h6 style="color: aquamarine"> As a AI language model, I'll be taking from here 🤖</h6>
         <img src="https://c.tenor.com/dezdYdcf8KYAAAAC/they-took-our-jobs-darryl-weathers.gif"
             alt="They took your job!">
         <div>
-
             <img class="r2" style="max-width: 70px; cursor: pointer;
                         "
                 src="https://iconsplace.com/wp-content/uploads/_icons/ffffff/256/png/restart-icon-18-256.png"

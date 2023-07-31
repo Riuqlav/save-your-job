@@ -3,6 +3,34 @@ body {
   font-size: 50px;
 }
 
+.battle {
+  border: 1px solid white;
+  padding: 20px;
+  margin: 20px;
+  position: relative;
+}
+
+#userPlayer {
+  position: absolute;
+  left: 0;
+  animation: slideRight 1s linear forwards;
+}
+
+@keyframes slideRight {
+  100% { left: 31.2%; }
+}
+
+#computerPlayer {
+  position: absolute;
+  right: 0;
+  animation: slideLeft 1s linear forwards;
+}
+
+@keyframes slideLeft {
+  100% { right: 31.5%; }
+}
+
+
 .selections {
   display: flex;
   justify-content: space-evenly;
@@ -36,4 +64,12 @@ body {
 
 .zoom:hover {
   transform: scale(1.5);
+}
+
+
+.choices {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 20px;
+  color: aquamarine;
 }
